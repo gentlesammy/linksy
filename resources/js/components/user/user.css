@@ -1,0 +1,71 @@
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.loader_div{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    background: black;
+    color: white;
+    line-height: 1.8rem;
+}
+
+.loader_div h2 span{
+      animation:blinking 1.5s infinite;
+}
+
+@keyframes blinking{
+0%{   color: red;   }
+47%{   color: blue; }
+100%{  color:  white;   }
+}
+
+.profileBox{
+    min-height: 100vh;
+}
+
+/* //profileBox */
+
+.profileBox{
+    width: 90%;
+    min-width: 300px;
+    max-width: 600px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    /* background:red !important; */
+    display:flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.user_links_box{
+    padding: 20px 10px;
+    padding-top: 0px;
+    overflow-y: scroll;
+
+}
+.user_links_box .link_box{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0px;
+}
+.user_links_box .link_box .btn{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.user_links_box .link_box .btn:hover{
+    opacity: 0.8;
+}
