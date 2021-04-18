@@ -26,6 +26,21 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="description" class="col-md-4 col-form-label text-md-right">Description</label>
+
+                            <div class="col-md-6">
+                                <textarea class="form-control {{$errors->first("description") ? "is-invalid" : ""}}" name="description"  id="desc" aria-describedby="Edit profile Description" required>
+                                    {{old("background")}}
+                                </textarea>
+                                @error('description')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">

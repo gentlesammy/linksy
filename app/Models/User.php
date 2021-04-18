@@ -18,10 +18,12 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'username',
+        'description',
         'email',
         'password',
         'background',
         'color',
+        'dp'
     ];
 
     /**
@@ -55,6 +57,14 @@ class User extends Authenticatable
 
     public function getRouteKeyName(){
         return 'username';
+    }
+
+    public static function convertImageSrc($imgSrc){
+        if(strpos($imgSrc, "cloudinary") !== false){
+            return $imgSrc;
+        } else{
+            return "/img/dp/".$imgSrc;
+        }
     }
 
 

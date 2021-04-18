@@ -39,8 +39,8 @@ Route::prefix("/dashboard")->middleware(['auth'])->group(function () {
     //settings and profile settings
     Route::get('/settings',[SettingsController::class, 'index'])->name('Dashboard_ViewSettings');
     Route::patch('/settings/color',[SettingsController::class, 'update_color'])->name('Dashboard_EditSettings_Color');
-    Route::patch('/settings',[UserController::class, 'update'])->name('Dashboard_EditSettings');
-    Route::post('/settings/profileimage',[UserController::class, 'profilesetting'])->name('Dashboard_ProfileImageSettings');
+    Route::patch('/settings/desc',[SettingsController::class, 'update_description'])->name('Dashboard_EditSettings_Desc');
+    Route::patch('/settings/profileimage',[SettingsController::class, 'update_image'])->name('Dashboard_ProfileImageSettings');
 
 });
 

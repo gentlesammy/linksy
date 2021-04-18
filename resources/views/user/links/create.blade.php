@@ -2,7 +2,7 @@
 
 @section("content")
 
-<div class="hero bg-dark py-2">
+<div class="hero py-2">
     <div class="container text-center bg-white h-50 py-5">
        <h1 class="">Create Link</h1>
        <div class="options">
@@ -14,7 +14,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-6 bg-white">
             <div class="formarea py-5">
                 <form action="/dashboard/links/new" method="post">
                     @csrf

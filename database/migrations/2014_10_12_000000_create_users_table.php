@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->bigInteger("total_visit_count")->default(0);
             $table->boolean('choosen')->default(false);
-            $table->foreignId('template_id')->nullable()->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('template_id')->nullable();
             $table->dateTime('payment_expires_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

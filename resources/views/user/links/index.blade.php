@@ -29,10 +29,10 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                    <?php $sn = 1; ?>
                             @foreach($links as $data)
                                 <tr>
-                                    <th scope="row">{{ $data->id }}</th>
+                                    <th scope="row">{{$sn++}}</th>
                                     <td>{{ $data->name }}</td>
                                     <td><a href="{{ $data->link }}">{{ $data->link }}</a></td>
                                     <td>{{$data->visits->count()}}</td>

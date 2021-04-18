@@ -3,13 +3,98 @@
     margin: 0;
     box-sizing: border-box;
 }
+h1{
+    font-weight: 900;
+}
 
-.col-md-6{
+.settingsbox .col-md-6{
     box-shadow: 2px 4px 2px 0px rgba(0, 0, 0, 0.1);
     transition: 0.6s;
 }
-.col-md-6:hover{
+.settingsbox .col-md-6:hover{
     box-shadow: 2px 4px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
+/* auth  pages styling */
+#app .card{
+    border: none;
+     box-shadow: 2px 4px 2px 0px rgba(0, 0, 0, 0.5);
+}
+#app .card-header{
+    background: black;
+    color: white;
+}
+
+ .form-control{
+    background: white !important;
+    border: none;
+    outline: none;  
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.5);
+    color: white;
+}
+ .form-control:focus{
+    background: black !important;
+    border: none;
+    outline: none;  
+ }
+
 /* settings page extra styling */
+
+.desc_container textarea{
+    color: black;
+    border-bottom: none;
+}
+ .image_section  .form-control{
+    border-bottom: none;
+    background: black !important;
+    color: white;
+}
+
+.settingsbox h3{
+    font-size: 16px;
+}
+
+.settingsbox img{
+    max-height:200px;
+}
+
+/* dashboard page styling */
+.dashboard_container{
+    box-shadow: 2px 4px 2px 0px rgba(0, 0, 0, 0.1);
+}
+.dashboard_container .box{
+    padding: 30px 20px;
+    background: white;
+    margin: 10px;
+    text-align: center;
+    line-height: 1.8rem;
+    box-shadow: 2px 4px 2px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.5s; 
+}
+
+.dashboard_container .box:hover{
+     box-shadow: 2px 4px 2px 0px rgba(0, 0, 0, 0.5);
+     background: skyblue;
+}
+.dashboard_container .links_box{
+    margin-bottom: 30px;
+}
+
+.dashboard_container .settings_box{
+    margin-bottom: 30px;
+}
+
+.dashboard_container .box .fa{
+    font-size: 28px;
+    color: skyblue;
+    margin-bottom: 10px;
+}
+
+.dashboard_container .box h3{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.dashboard_container .box p{
+    font-weight: 600;
+}
