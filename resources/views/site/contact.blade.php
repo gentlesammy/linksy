@@ -1,13 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact</title>
-</head>
-<body>
-    <h1>Contact Us</h1>
+@extends('layouts.site')
 
-</body>
-</html>
+@section("content")
+    <section class="blog-hero">
+        <div class="container text-center py-5">
+        <h1 class="text-dark pt-5">CONTACT US</h1>
+        </div>
+    </section>
+
+    <section class="contactuspage">
+            <div class="container">
+                <div class="contactbox">
+
+                    <div class="formbox">
+                        <h4 class="text-center">CONTACT FORM</h4>
+                        <h5 class="">Please Fill in all information below and we will get back to you</h5>
+
+                        <form  method="post" action="/contact" class="contactform">
+                            @csrf
+                            <div class="form-group">
+                                <input type="text" name="name" id="name" placeholder="Full Name" class="form-control" value="{{old('name')}}">
+                                @error('name')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" placeholder="Email Address" class="form-control" value="{{old('email')}}">
+                                @error('email')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="phone" id="phone" placeholder="Phone Number" class="form-control" value="{{old('phone')}}">
+                                @error('phone')
+                                    <p class="text-danger">{{$message}}</p>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <textarea name="messages" id="messages" rows="5" class="form-control text-left">{{old('messages') ?? 'Message'}}</textarea>
+                                @error('messages')
+                                   <p class="text-danger"> {{$message}}</p>
+                                @enderror
+                            </div>
+                            <div class="formgroup">
+
+                                    @if(Session::has('flash_message'))
+                                    <div class="alert {{Session::get('flash_type')}} mx-5 px-5 mt-3" id="msgreply">
+                                        <h3 class="">{{Session::get('flash_message')}}</h3>
+                                    </div>
+                                    @endif
+
+
+                            </div>
+                            <input type="submit" class="form-control btn btnone" id="subbtnform" value="Send Message">
+                        </form>
+                    </div>
+                    <div class="infobox">
+                        <div class="contactcard">
+                            <div class="iconpart">
+                                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                            </div>
+                            <div class="msgpart">
+
+                                <p>Ikorodu, Lagos State</p>
+                                <p>Nigeria</p>
+                            </div>
+                        </div>
+
+                        <div class="contactcard">
+                            <div class="iconpart">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="msgpart">
+
+                                <p>info@mylink.com.ng</p>
+                                <p>info@mylink.com.ng</p>
+                            </div>
+                        </div>
+
+                        <div class="contactcard">
+                            <div class="iconpart">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="msgpart">
+
+                                <p>+2348060913903</p>
+                                <p>+2348105651234</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+
+
+
+
+@endsection
