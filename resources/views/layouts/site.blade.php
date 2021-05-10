@@ -112,5 +112,46 @@
             @yield('content')
         </main>
     </div>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="falsefooter">
+                <div class="copy box">
+                    <h6>About Linkster</h6>
+                    <p>
+                        Linkster gives you a link where you can store all links that matters,
+                        your targetted audience can easily find all your links easily.
+                        You can also use linkster on sites that allowed just a single link such
+                        as Instagram. 
+                    </p>
+                </div>
+                <div class="newsletter box">
+                    <h6>Subscribe Now</h6>
+                    <p>
+                        Get Hints on how to use Linkster to make your business more vissible. You can always unsubscribe.
+                        <form action="" method="post">
+                            <input type="text" placeholder="example@email.com" class="form-control">
+                        </form>
+                    </p>
+
+                </div>
+                <div class="sociallinks box">
+
+                    <h6>Follow Us</h6>
+                    <p>Get Our Posts Regularly through our social platforms</p>
+                    <ul class="social-links list unstyle">
+                        <li><a href="https://web.facebook.com/penhubng" target="_new"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/hub_pen" target="_new"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class="social-link"><a href="https://www.instagram.com/penhubng" target="_new"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li class="social-link"><a href="https://wa.me/2348060913903?text=official%20message"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright text-center">
+            <p>Copyright {{Date('Y')}} All Rights Reserved | Powered By Sayem Technologies</p>
+        </div>
+</footer>
 </body>
 </html>

@@ -286,3 +286,278 @@ section{
      margin-bottom: 20px;
     
 }
+
+/* footer section begins here */
+footer {
+    padding: 10vh 0px;
+    background: var(--lightBrown);
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+footer .falsefooter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 50px;
+}
+footer .falsefooter .copy {
+    flex: 2;
+    margin-right: 20px;
+}
+footer .falsefooter .newsletter {
+    flex: 2;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+footer .falsefooter .sociallinks {
+    flex: 2;
+    margin-left: 20px;
+}
+footer .falsefooter .box {
+    text-align: center;
+    padding: 30px;
+}
+footer .falsefooter .box p {
+    text-align: justify;
+    line-height: 24px;
+    color: var(--darkBlue);
+    font-size: 0.8em;
+}
+footer .falsefooter h6 {
+    color: black;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+.social-links li {
+    list-style-type: none;
+    margin: 5px;
+}
+.social-links li a i {
+    background: #fff;
+    color: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 15%;
+    transition: all 0.2s ease-in-out;
+}
+.social-links ul li a i:hover {
+    opacity: 0.7;
+    color: #fff !important;
+}
+.fa-facebook:hover {
+    background: #3b5998 !important;
+    color: #fff !important;
+}
+.fa-linkedin:hover {
+    background: #007bb6 !important;
+    color: #fff !important;
+}
+.fa-twitter:hover {
+    background: #00aced !important;
+    color: #fff !important;
+}
+.fa-instagram:hover {
+    background: #d6249f;
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+    );
+    color: #fff !important;
+}
+.fa-whatsapp:hover {
+    background: linear-gradient(#25d366, #25d366);
+    color: #fff !important;
+}
+
+/* mobile responsiveness */
+@media (max-width: 768px) {
+    footer {
+        padding: 10vh 20px;
+    }
+    footer .falsefooter {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    footer .falsefooter .copy {
+        margin-right: 0px;
+    }
+    footer .falsefooter .newsletter {
+        flex: 2;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    footer .falsefooter .sociallinks {
+        flex: 2;
+        margin-left: 0px;
+    }
+    footer .falsefooter .box {
+        text-align: center;
+        padding: 10px;
+    }
+    footer .falsefooter .box p {
+        text-align: justify;
+        line-height: 24px;
+        color: lightgray;
+        font-size: 0.8em;
+    }
+    footer .falsefooter h6 {
+        color: var(--darkBlue);
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+}
+
+/*
+######################################################
+   about us styling page
+######################################################
+*/
+.aboutdetail {
+    background: #f3f3f3;
+    padding: 20px;
+    padding: 10vh 0px;
+}
+.aboutcontainer {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 30px;
+}
+.aboutcontainer .welcome-image {
+    grid-column: 1/7;
+    width: 100%;
+    box-shadow: 0 3px 5px 0 rgba(12, 15, 15, 0.6);
+    padding: 0px;
+    background: url("../images/hero2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.aboutcontainer .welcomemessage {
+    grid-column: 7/-1;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 3px 5px 0 rgba(12, 15, 15, 0.6);
+    padding: 20px;
+}
+
+.aboutcontainer .welcomemessage p {
+    text-align: justify;
+    line-height: 26px;
+    font-size: 1.2em;
+}
+.aboutcontainer .welcomemessage h4 {
+    font-weight: 600;
+}
+
+.aboutcontainer .writerinfo {
+    grid-column: 1/7;
+    width: 100%;
+    box-shadow: 0 3px 5px 0 rgba(12, 15, 15, 0.6);
+    padding: 20px;
+}
+.aboutcontainer .writerinfo p {
+    text-align: justify;
+    line-height: 26px;
+    font-size: 1.2em;
+}
+.aboutcontainer .writerinfo h4 {
+    font-weight: 600;
+}
+
+.aboutcontainer .writerimage {
+    grid-column: 7/-1;
+    background-color: #3d5110;
+    width: 100%;
+    box-shadow: 0 3px 5px 0 rgba(12, 15, 15, 0.6);
+    background: url("../images/samyemi.jpeg");
+    background-size: cover;
+    min-height: 20vh;
+}
+.aboutcontainer .teaminfo {
+    grid-column: 1/-1;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 3px 5px 0 rgba(12, 15, 15, 0.6);
+    min-height: 50vh;
+}
+
+/*  mobile responsiveness          */
+@media (max-width: 640px) {
+    .aboutdetail {
+        background: #f3f3f3;
+        padding: 20px;
+        padding: 2vh 0px;
+    }
+    .aboutcontainer {
+        grid-row-gap: 10px;
+    }
+    .aboutcontainer .welcome-image {
+        grid-column: 1/-1;
+        height: 20vh;
+    }
+
+    .aboutcontainer .welcomemessage {
+        grid-column: 1/-1;
+        padding: 10px;
+    }
+
+    .aboutcontainer .welcomemessage p {
+        text-align: justify;
+        line-height: 1.9rem;
+        font-size: 1.2em;
+    }
+    .aboutcontainer .welcomemessage h4 {
+        font-weight: 400;
+    }
+
+    .aboutcontainer .writerinfo {
+        grid-column: 1/-1;
+        padding: 10px;
+    }
+    .aboutcontainer .writerinfo p {
+        text-align: justify;
+        line-height: 26px;
+        font-size: 1.2em;
+    }
+    .aboutcontainer .writerinfo h4 {
+        font-weight: 400;
+    }
+
+    .aboutcontainer .writerimage {
+        grid-column: 1/-1;
+        min-height: 20vh;
+    }
+    .aboutcontainer .teaminfo {
+        grid-column: 1/-1;
+        padding: 20px;
+        width: 100%;
+        box-shadow: 0 3px 5px 0 rgba(12, 15, 15, 0.6);
+        min-height: 50vh;
+    }
+}
+
+/*
+######################################################
+   about us styling page
+######################################################
+*/
