@@ -9,7 +9,7 @@
             <p>A single page to show all Links that matters to you.
             Now you can connect with your audience using just a single link! Call it Link Bank</p>
             <a href="/register" class="btn btn-primary btn-lg">Start Using</a>
-            <a href="" class="btn btn-primary btn-lg">How It works</a>
+            <a href="/workings" class="btn btn-primary btn-lg">How It works</a>
         </div>
 
         <div class="image-container">
@@ -106,7 +106,7 @@
 
             </p>
             <a href="/register" class="btn btn-primary btn-lg">Start Using</a>
-            <a href="" class="btn btn-primary btn-lg">Other Usage</a>
+            <a href="/usage" class="btn btn-primary btn-lg">Other Usage</a>
         </div>
     </div>
 </section>

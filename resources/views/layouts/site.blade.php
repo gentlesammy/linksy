@@ -38,15 +38,27 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         @guest
-                            <li class="nav-item">
+                            <li class="{{ Request::is('/') ? 'active' : '' .  " nav-item"}}">
                                 <a class="nav-link" href="/"> Home</a>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="{{ Request::is('about') ? 'active' : '' .  " nav-item"}}">
                                 <a class="nav-link" href="/about"> About</a>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="{{ Request::is('workings') ? 'active' : '' .  " nav-item"}}">
+                                <a class="nav-link" href="/workings"> How It Work</a>
+                            </li>
+
+                            <li class="{{ Request::is('usage') ? 'active' : '' .  " nav-item"}}">
+                                <a class="nav-link" href="/usage"> Usage</a>
+                            </li>
+
+                            <li class="{{ Request::is('terms') ? 'active' : '' .  " nav-item"}}">
+                                <a class="nav-link" href="/terms"> Terms</a>
+                            </li>
+
+                            <li class="{{ Request::is('contact') ? 'active' : '' .  " nav-item"}}">
                                 <a class="nav-link" href="/contact"> Contact</a>
                             </li>
                             

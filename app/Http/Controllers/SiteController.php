@@ -18,6 +18,18 @@ class SiteController extends Controller
         return view('site.contact');
     }
 
+    public function terms(){
+        return view('site.terms');
+    }
+
+    public function workings(){
+        return view('site.workings');
+    }
+
+    public function usage(){
+        return view('site.usage');
+    }
+
 
 
 

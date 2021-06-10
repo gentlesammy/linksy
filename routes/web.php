@@ -23,7 +23,9 @@ use App\Http\Controllers\SettingsController;
 Route::get('/',[SiteController::class, 'homepage'])->name('HomePage');
 Route::get('/about',[SiteController::class, 'aboutpage'])->name('aboutpage');
 Route::get('/contact',[SiteController::class, 'contactpage'])->name('contactpage');
-
+Route::get('/terms',[SiteController::class, 'terms'])->name('termsPage');
+Route::get('/workings',[SiteController::class, 'workings'])->name('workingsPage');
+Route::get('/usage',[SiteController::class, 'usage'])->name('usagePage');
 //dashboard routes
 Route::prefix("/dashboard")->middleware(['auth'])->group(function () {
     //dashboard home
