@@ -7,6 +7,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\VisitController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\Admin\UsersController as AdminUserDashboard;
+use App\Http\Controllers\Admin\DashboradController as AdminDashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +47,25 @@ Route::prefix("/dashboard")->middleware(['auth'])->group(function () {
     Route::patch('/settings/profileimage',[SettingsController::class, 'update_image'])->name('Dashboard_ProfileImageSettings');
 
 });
+
+//admin routes goes here
+Route::prefix("/admin")->middleware(['adminOnly'])->group(function () {
+    // admin dashboard
+    Route::get('/', [AdminDashboard::class, 'index'])->name('adminDashboard');
+
+
+//    users control
+    Route::get('/users', [AdminUserDashboard::class, 'index'])->name('getAllUsers');
+    Route::get('/users/{user}', [AdminUserDashboard::class, 'show'])->name('getUserDetail');
+    Route::get('/users/{user}/block', [AdminUserDashboard::class, 'blockUser'])->name('blockUser');
+    Route::get('/users/{user}/unblock', [AdminUserDashboard::class, 'unblockUser'])->name('unblockUser');
+    Route::get('/users/{user}/ban', [AdminUserDashboard::class, 'banUser'])->name('banUser');
+    Route::get('/users/{user}/unban', [AdminUserDashboard::class, 'unbanUser'])->name('unbanUser');
+    Route::get('/users/{user}/verify', [AdminUserDashboard::class, 'verifyUser'])->name('verifyUser');
+    Route::delete('/users/{user}', [AdminUserDashboard::class, 'delete'])->name('deleteUser');
+
+});
+
 
 Auth::routes();
 

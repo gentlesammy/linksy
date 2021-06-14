@@ -65,6 +65,7 @@ class Kernel extends HttpKernel
         //my middlewares
         'usernotblocked' => \App\Http\Middleware\UserNotBlocked::class,
         'usernotsuspended' => \App\Http\Middleware\UserNotSuspended::class,
+        'adminOnly' => \App\Http\Middleware\adminOnly::class,
 
 
     ];
